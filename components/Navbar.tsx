@@ -71,7 +71,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
               className="transition-opacity duration-300 opacity-100 focus:outline-none block"
               aria-label="arc Home"
             >
-              <Logo className="h-10 md:h-16 w-auto mix-blend-screen" />
+              <Logo className="h-5 sm:h-6 md:h-16 w-auto mix-blend-screen" />
             </button>
             <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
               <div className="bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] px-2 py-1 rounded tracking-widest uppercase font-mono shadow-lg">
@@ -119,46 +119,48 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
             {isOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
-      </nav>
+      </nav >
 
       {/* Mobile Overlay */}
       <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 bg-arc-black z-[90] flex flex-col items-center justify-center space-y-8 md:hidden"
-          >
-            {navLinks.map((link) => (
-              <button
-                key={link.name}
-                onClick={() => handleLinkClick(link.href)}
-                className="text-3xl font-light text-white hover:text-arc-accent transition-colors"
-              >
-                {link.name}
-              </button>
-            ))}
+        {
+          isOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 bg-arc-black z-[90] flex flex-col items-center justify-center space-y-8 md:hidden"
+            >
+              {navLinks.map((link) => (
+                <button
+                  key={link.name}
+                  onClick={() => handleLinkClick(link.href)}
+                  className="text-3xl font-light text-white hover:text-arc-accent transition-colors"
+                >
+                  {link.name}
+                </button>
+              ))}
 
-            {/* Mobile Language Switcher */}
-            <div className="flex items-center space-x-6 text-xl mt-8 pt-8 border-t border-white/10 w-full justify-center">
-              <button
-                onClick={() => setLanguage('ko')}
-                className={`${language === 'ko' ? 'text-white font-bold' : 'text-gray-500'}`}
-              >
-                KOREAN
-              </button>
-              <button
-                onClick={() => setLanguage('en')}
-                className={`${language === 'en' ? 'text-white font-bold' : 'text-gray-500'}`}
-              >
-                ENGLISH
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              {/* Mobile Language Switcher */}
+              <div className="flex items-center space-x-6 text-xl mt-8 pt-8 border-t border-white/10 w-full justify-center">
+                <button
+                  onClick={() => setLanguage('ko')}
+                  className={`${language === 'ko' ? 'text-white font-bold' : 'text-gray-500'}`}
+                >
+                  KOREAN
+                </button>
+                <button
+                  onClick={() => setLanguage('en')}
+                  className={`${language === 'en' ? 'text-white font-bold' : 'text-gray-500'}`}
+                >
+                  ENGLISH
+                </button>
+              </div>
+            </motion.div>
+          )
+        }
+      </AnimatePresence >
     </>
   );
 };

@@ -159,7 +159,7 @@ const Portfolio: React.FC<PortfolioProps> = ({ items }) => {
               <div key={year} className="relative">
                 {/* Year Marker */}
                 <div className="sticky top-24 z-10 mb-8 md:mb-0 md:absolute md:-left-12 lg:-left-24">
-                  <h3 className="text-6xl md:text-8xl font-black text-white/20 md:text-white/30 select-none md:-rotate-90 origin-center transform">
+                  <h3 className="text-6xl md:text-8xl font-black text-white/40 md:text-white/50 select-none md:-rotate-90 origin-center transform">
                     {year}
                   </h3>
                 </div>
