@@ -38,7 +38,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     mainImageUrl: 'https://picsum.photos/1200/800?random=12',
     galleryImages: getGallery(12)
   },
-  
+
   // 2023 Projects
   {
     id: 'p2',
@@ -111,8 +111,8 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     mainImageUrl: 'https://picsum.photos/1200/800?random=6',
     galleryImages: getGallery(6)
   },
-  
-  // Pre-2020 Projects (Archive)
+
+  // Pre-2020 Projects (archive)
   {
     id: 'p7',
     title: 'Global Auto Salon',
@@ -141,7 +141,7 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
   },
   {
     id: 'p9',
-    title: 'Historical Archive',
+    title: 'Historical archive',
     client: 'National Museum',
     year: 2017,
     month: 5,

@@ -12,6 +12,7 @@ import ParticleNetwork from './components/ParticleNetwork';
 import Admin from './components/Admin';
 import { PORTFOLIO_DATA } from './data';
 import { PortfolioItem } from './types';
+import Skills from './components/Skills';
 
 const AppContent: React.FC = () => {
   const [currentView, setCurrentView] = useState<'home' | 'admin'>('home');
@@ -73,7 +74,7 @@ const AppContent: React.FC = () => {
           />
         )}
       </main>
-
+      {/* <Skills /> */}
       <Footer />
 
       {/* Fixed Admin Button */}

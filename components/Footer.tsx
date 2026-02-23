@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 gap-6">
         <div className="flex flex-col items-center md:items-start gap-3">
           <Logo className="h-10 w-auto mix-blend-screen opacity-80" />
-          <span>© {new Date().getFullYear()} ARC Systems Inc. All rights reserved.</span>
+          <span>© {new Date().getFullYear()} arc Systems Inc. All rights reserved.</span>
         </div>
         <div className="flex space-x-8">
           <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>

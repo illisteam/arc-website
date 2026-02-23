@@ -69,13 +69,13 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
             <button
               onClick={() => handleLinkClick('#home')}
               className="transition-opacity duration-300 opacity-100 focus:outline-none block"
-              aria-label="ARC Home"
+              aria-label="arc Home"
             >
               <Logo className="h-14 md:h-16 w-auto mix-blend-screen" />
             </button>
             <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
               <div className="bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] px-2 py-1 rounded tracking-widest uppercase font-mono shadow-lg">
-                ARC
+                arc
               </div>
             </div>
           </div>

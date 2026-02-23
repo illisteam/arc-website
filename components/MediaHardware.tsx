@@ -78,13 +78,13 @@ const MediaHardware: React.FC = () => {
                     >
                         {language === 'ko' ? (
                             <>
-                                ARC는 최고의 미디어 하드웨어를 보유하고 유통합니다.
+                                arc는 최고의 미디어 하드웨어를 보유하고 유통합니다.
                                 <br className="hidden md:block" />
                                 규모에 관계없이 프로젝트에 최적화된 장비를 제안해 드립니다.
                             </>
                         ) : (
                             <>
-                                ARC owns and distributes top-tier media hardware.
+                                arc owns and distributes top-tier media hardware.
                                 <br className="hidden md:block" />
                                 We propose the optimal equipment for your project, regardless of scale.
                             </>

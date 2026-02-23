@@ -6,7 +6,7 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-24 bg-gradient-to-b from-arc-dark to-black border-t border-white/5">
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
-          
+
           <div className="text-center mb-16">
             <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">Start a Project</h3>
             <p className="text-gray-400">Ready to elevate your exhibition experience? Let's talk.</p>
@@ -53,29 +53,29 @@ const Contact: React.FC = () => {
             {/* Form */}
             <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input 
-                  type="text" 
-                  placeholder="Name" 
+                <input
+                  type="text"
+                  placeholder="Name"
                   className="w-full bg-arc-gray/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-arc-accent transition-colors"
                 />
-                <input 
-                  type="email" 
-                  placeholder="Email" 
+                <input
+                  type="email"
+                  placeholder="Email"
                   className="w-full bg-arc-gray/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-arc-accent transition-colors"
                 />
               </div>
-              <input 
-                type="text" 
-                placeholder="Company" 
+              <input
+                type="text"
+                placeholder="Company"
                 className="w-full bg-arc-gray/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-arc-accent transition-colors"
               />
-              <textarea 
-                rows={4} 
-                placeholder="Project Details (Exhibition Name, Date, Requirements)" 
+              <textarea
+                rows={4}
+                placeholder="Project Details (Exhibition Name, Date, Requirements)"
                 className="w-full bg-arc-gray/30 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-arc-accent transition-colors"
               ></textarea>
-              <button 
-                type="submit" 
+              <button
+                type="submit"
                 className="w-full bg-white text-black font-bold py-4 rounded-lg hover:bg-arc-accent hover:text-white transition-all duration-300"
               >
                 Send Message
