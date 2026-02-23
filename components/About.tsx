@@ -144,7 +144,7 @@ const About: React.FC = () => {
               <h3 className="text-sm md:text-base font-bold tracking-[0.3em] text-arc-accent uppercase mb-2">
                 Brand Philosophy
               </h3>
-              <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-6xl font-black text-white mb-6 tracking-tight whitespace-nowrap">
                 ALL / ROUNDER / COMPANY
               </h2>
             </motion.div>

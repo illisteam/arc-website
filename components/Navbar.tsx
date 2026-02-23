@@ -63,7 +63,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
         className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${scrolled || isOpen || currentView === 'admin' ? 'bg-arc-black/90 backdrop-blur-md py-3 border-b border-white/5' : 'bg-transparent py-6'
           }`}
       >
-        <div className="container mx-auto px-6 flex justify-between items-end">
+        <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
           {/* Logo with Tooltip */}
           <div className="relative group z-[101]">
             <button
@@ -71,7 +71,7 @@ const Navbar: React.FC<NavbarProps> = ({ onNavigate, currentView }) => {
               className="transition-opacity duration-300 opacity-100 focus:outline-none block"
               aria-label="arc Home"
             >
-              <Logo className="h-14 md:h-16 w-auto mix-blend-screen" />
+              <Logo className="h-10 md:h-16 w-auto mix-blend-screen" />
             </button>
             <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
               <div className="bg-white/10 backdrop-blur-md border border-white/10 text-white text-[10px] px-2 py-1 rounded tracking-widest uppercase font-mono shadow-lg">
