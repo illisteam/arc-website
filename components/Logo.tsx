@@ -66,7 +66,7 @@ const Logo: React.FC<LogoProps> = ({ className }) => {
   // 2. Primary: Attempt to load the image file from root directory
   return (
     <img
-      src="logo.png"
+      src="/logo_v2.png"
       alt="arc - ALL / ROUNDER / COMPANY"
       className={`${className} object-contain`}
       onError={() => setImgError(true)}
