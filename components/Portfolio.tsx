@@ -71,16 +71,30 @@ const Lightbox: React.FC<{
         </div>
       )}
 
-      <motion.img
-        key={currentIndex}
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        exit={{ opacity: 0, x: -20 }}
-        transition={{ duration: 0.3 }}
-        src={images[currentIndex]}
-        alt={`View ${currentIndex + 1}`}
-        className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
-      />
+      {images[currentIndex].match(/\.(mp4|webm|ogg)(\?.*)?$/i) ? (
+        <motion.video
+          key={currentIndex}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.3 }}
+          src={images[currentIndex]}
+          autoPlay
+          controls
+          className="w-[1280px] h-[1280px] max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl bg-black/20"
+        />
+      ) : (
+        <motion.img
+          key={currentIndex}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -20 }}
+          transition={{ duration: 0.3 }}
+          src={images[currentIndex]}
+          alt={`View ${currentIndex + 1}`}
+          className="w-[1280px] h-[1280px] max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+        />
+      )}
     </motion.div>
   );
 };
