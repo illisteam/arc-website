@@ -244,29 +244,51 @@ const ProjectRow: React.FC<{
         {/* Main Image (Trigger) */}
         <div className="lg:w-2/3 w-full">
           <div
-            className="relative aspect-video rounded-lg overflow-hidden cursor-pointer group/image bg-gray-900"
-            onClick={onToggle}
+            className="relative aspect-video rounded-lg overflow-hidden cursor-pointer group/image bg-gray-900 shadow-xl border border-white/5"
           >
             <img
               src={project.mainImageUrl}
               alt={project.title}
               className="w-full h-full object-cover transition-transform duration-700 group-hover/image:scale-105"
+              onClick={onToggle}
               onError={(e) => {
                 // Fallback for broken images
                 (e.target as HTMLImageElement).src = 'https://placehold.co/1200x800/1a1a1a/FFF?text=No+Image';
               }}
             />
-            <div className="absolute inset-0 bg-black/0 group-hover/image:bg-black/20 transition-colors flex items-center justify-center">
-              <motion.div
-                className="bg-white/10 backdrop-blur-md p-3 rounded-full text-white opacity-0 group-hover/image:opacity-100 transition-opacity"
-                whileHover={{ scale: 1.1 }}
-              >
-                {isExpanded ? <ChevronUp /> : <ChevronDown />}
-              </motion.div>
+
+            {/* Overlay Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none opacity-0 group-hover/image:opacity-100 transition-opacity" />
+
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="flex gap-4">
+                <motion.button
+                  className="bg-white/10 backdrop-blur-md p-4 rounded-full text-white opacity-0 group-hover/image:opacity-100 transition-all pointer-events-auto hover:bg-white/20 border border-white/20"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={onToggle}
+                  title={isExpanded ? "Hide Details" : "Show Details"}
+                >
+                  {isExpanded ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+                </motion.button>
+
+                <motion.button
+                  className="bg-arc-accent/80 backdrop-blur-md p-4 rounded-full text-white opacity-0 group-hover/image:opacity-100 transition-all pointer-events-auto hover:bg-arc-accent border border-white/20"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onImageClick([project.mainImageUrl, ...project.galleryImages], 0);
+                  }}
+                  title="Expand Image"
+                >
+                  <ZoomIn size={24} />
+                </motion.button>
+              </div>
             </div>
 
-            <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur px-3 py-1 rounded text-xs text-white">
-              {isExpanded ? 'Hide Gallery' : 'View Gallery'}
+            <div className="absolute bottom-4 right-4 bg-black/60 backdrop-blur px-3 py-1 rounded text-[10px] uppercase tracking-widest text-white/80 pointer-events-none">
+              {isExpanded ? 'Collapse' : 'Expand'}
             </div>
           </div>
         </div>
@@ -289,8 +311,8 @@ const ProjectRow: React.FC<{
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: idx * 0.1 }}
-                  className="aspect-square rounded-md overflow-hidden cursor-pointer relative group/thumb bg-gray-900"
-                  onClick={() => onImageClick(project.galleryImages || [], idx)}
+                  className="aspect-square rounded-md overflow-hidden cursor-pointer relative group/thumb bg-gray-900 border border-white/5"
+                  onClick={() => onImageClick([project.mainImageUrl, ...project.galleryImages], idx + 1)}
                 >
                   <img
                     src={img}
@@ -300,7 +322,7 @@ const ProjectRow: React.FC<{
                       (e.target as HTMLImageElement).src = 'https://placehold.co/600x400/1a1a1a/FFF?text=No+Image';
                     }}
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover/thumb:bg-black/30 transition-colors flex items-center justify-center opacity-0 group-hover/thumb:opacity-100">
+                  <div className="absolute inset-0 bg-black/0 group-hover/thumb:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover/thumb:opacity-100">
                     <ZoomIn className="text-white w-6 h-6" />
                   </div>
                 </motion.div>

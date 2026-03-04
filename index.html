@@ -1,111 +1,104 @@
 <!DOCTYPE html>
 <html lang="ko" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>arc | Global Exhibition Partner</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'Noto Sans KR', 'sans-serif'],
-            },
-            colors: {
-              arc: {
-                black: '#0a0a0a',
-                dark: '#121212',
-                gray: '#2a2a2a',
-                light: '#e5e5e5',
-                accent: '#3b82f6', // Subtle blue accent
-              }
-            },
-            animation: {
-              'float': 'float 6s ease-in-out infinite',
-              'float-delayed': 'float 6s ease-in-out 3s infinite',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-20px)' },
-              }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>arc | Global Exhibition Partner</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'Noto Sans KR', 'sans-serif'],
+          },
+          colors: {
+            arc: {
+              black: '#0a0a0a',
+              dark: '#121212',
+              gray: '#2a2a2a',
+              light: '#e5e5e5',
+              accent: '#3b82f6',
             }
           },
+          animation: {
+            'float': 'float 6s ease-in-out infinite',
+            'float-delayed': 'float 6s ease-in-out 3s infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            }
+          }
         },
-      }
-    </script>
-    <style>
-      body {
-        background-color: #0a0a0a;
-        color: #e5e5e5;
-        overflow-x: hidden;
-        margin: 0;
-      }
-      /* Initial Loading Spinner */
-      #initial-loader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #0a0a0a;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-        transition: opacity 0.5s ease-out;
-      }
-      .spinner {
-        width: 40px;
-        height: 40px;
-        border: 3px solid rgba(255, 255, 255, 0.3);
-        border-radius: 50%;
-        border-top-color: #fff;
-        animation: spin 1s ease-in-out infinite;
-      }
-      @keyframes spin {
-        to { transform: rotate(360deg); }
-      }
+      },
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #e5e5e5;
+      overflow-x: hidden;
+      margin: 0;
+    }
 
-      /* Custom scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
+    #initial-loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #0a0a0a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease-out;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
       }
-      ::-webkit-scrollbar-track {
-        background: #0a0a0a;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #333;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-      }
-    </style>
+    }
+  </style>
   <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@18.2.0?dev",
-    "react/": "https://esm.sh/react@18.2.0/?dev",
-    "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime?dev",
-    "react-dom": "https://esm.sh/react-dom@18.2.0?dev",
-    "react-dom/": "https://esm.sh/react-dom@18.2.0/?dev",
-    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client?dev",
-    "framer-motion": "https://esm.sh/framer-motion@10.16.4?external=react,react-dom",
-    "lucide-react": "https://esm.sh/lucide-react@0.292.0?external=react,react-dom"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@18.2.0?dev",
+        "react/": "https://esm.sh/react@18.2.0/?dev",
+        "react/jsx-runtime": "https://esm.sh/react@18.2.0/jsx-runtime?dev",
+        "react-dom": "https://esm.sh/react-dom@18.2.0?dev",
+        "react-dom/": "https://esm.sh/react-dom@18.2.0/?dev",
+        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client?dev",
+        "framer-motion": "https://esm.sh/framer-motion@10.16.4?external=react,react-dom",
+        "lucide-react": "https://esm.sh/lucide-react@0.292.0?external=react,react-dom"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css">
 </head>
-  <body>
-    <!-- Preloader shown before React mounts -->
-    <div id="initial-loader">
-      <div class="spinner"></div>
-    </div>
-    <div id="root"></div>
+
+<body>
+  <div id="initial-loader">
+    <div class="spinner"></div>
+  </div>
+  <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>
+
 </html>

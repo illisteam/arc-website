@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Monitor, PenTool, Settings, Globe, X, Check } from 'lucide-react';
-import { ServiceItem } from '../types';
+import { ServiceItem } from '../src/types';
 
 const servicesEn: ServiceItem[] = [
   {

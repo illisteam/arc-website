@@ -11,7 +11,7 @@ if (!rootElement) {
 
 const root = ReactDOM.createRoot(rootElement);
 
-// Hide loader once app is ready to mount
+// Hide initial loader once React bundle is loaded
 if (loaderElement) {
   loaderElement.style.opacity = '0';
   setTimeout(() => {

@@ -11,18 +11,45 @@ const getGallery = (seed: number) => [
 ];
 
 export const PORTFOLIO_DATA: PortfolioItem[] = [
+  // 2026 Projects (Upcoming/Future)
+  {
+    id: 'p-tesla-2026',
+    title: 'Futuristic EV Concept Booth',
+    client: 'Tesla',
+    year: 2026,
+    month: 1,
+    location: 'CES, Las Vegas',
+    description: 'A glimpse into the future of autonomous transit with a multi-sensory experience zone.',
+    category: ProjectCategory.EXHIBITION,
+    tags: ['Tesla', 'AI', 'Concept'],
+    mainImageUrl: '/projects/tesla_ev.png', // Reusing the high-quality Tesla image
+    galleryImages: getGallery(101)
+  },
   // 2024 Projects
+  {
+    id: 'p0',
+    title: 'Sustainable Mobility Showcase',
+    client: 'Tesla',
+    year: 2024,
+    month: 6,
+    location: 'Sustainable Expo, Berlin',
+    description: 'Minimalist EV exhibition booth focusing on clean energy and autonomous driving visualization.',
+    category: ProjectCategory.EXHIBITION,
+    tags: ['Tesla', 'EV', 'Sustainable'],
+    mainImageUrl: '/projects/tesla_ev.png',
+    galleryImages: getGallery(111)
+  },
   {
     id: 'p1',
     title: 'Future Tech Vision',
     client: 'Samsung Electronics',
     year: 2024,
-    month: 1, // January (CES)
+    month: 1,
     location: 'CES, Las Vegas',
     description: 'Main booth immersive LED facade design and system operation featuring a 8K ultra-wide media wall.',
     category: ProjectCategory.EXHIBITION,
     tags: ['CES', 'LED System', 'Media Art'],
-    mainImageUrl: 'https://picsum.photos/1200/800?random=1',
+    mainImageUrl: '/projects/samsung_ces.png',
     galleryImages: getGallery(1)
   },
   {
@@ -30,35 +57,60 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     title: 'Mobile Experience Zone',
     client: 'Samsung Electronics',
     year: 2024,
-    month: 2, // Feb (MWC)
+    month: 2,
     location: 'MWC, Barcelona',
     description: 'Interactive Galaxy AI experience zone setup with kinetic displays.',
     category: ProjectCategory.EXHIBITION,
     tags: ['MWC', 'Interactive', 'Kinetic'],
-    mainImageUrl: 'https://picsum.photos/1200/800?random=12',
+    mainImageUrl: '/projects/samsung_mwc.png',
     galleryImages: getGallery(12)
   },
-
-  // 2023 Projects
+  {
+    id: 'p2-2',
+    title: 'Intelligent Living Space',
+    client: 'LG Electronics',
+    year: 2024,
+    month: 9,
+    location: 'IFA, Berlin',
+    description: 'A showcase of LG\'s smart home ecosystem with integrated AI and transparent OLED technology.',
+    category: ProjectCategory.EXHIBITION,
+    tags: ['IFA', 'Smart Home', 'OLED'],
+    mainImageUrl: '/projects/lg_smart.png',
+    galleryImages: getGallery(21)
+  },
   {
     id: 'p2',
     title: 'Smart Home Connectivity',
     client: 'LG Electronics',
-    year: 2023,
-    month: 9, // September (IFA)
-    location: 'IFA, Berlin',
+    year: 2024,
+    month: 1,
+    location: 'CES, Las Vegas',
     description: 'IoT experience zone signage installation and technical support connecting 50+ smart devices.',
     category: ProjectCategory.EXHIBITION,
-    tags: ['IFA', 'Signage', 'Interactive'],
-    mainImageUrl: 'https://picsum.photos/1200/800?random=2',
+    tags: ['CES', 'Signage', 'Interactive'],
+    mainImageUrl: '/projects/lg_ifa.png',
     galleryImages: getGallery(2)
   },
+  {
+    id: 'p5-2',
+    title: 'Advanced Telematics',
+    client: 'Hyundai Mobis',
+    year: 2024,
+    month: 10,
+    location: 'KES, Seoul',
+    description: 'Future mobility platform integration and high-speed data visualization center.',
+    category: ProjectCategory.EXHIBITION,
+    tags: ['KES', 'Telematics', 'Future Mobility'],
+    mainImageUrl: '/projects/hyundai_2024.png',
+    galleryImages: getGallery(41)
+  },
+  // 2023 Projects
   {
     id: 'p3',
     title: 'Mobile World Premiere',
     client: 'SK Telecom',
     year: 2023,
-    month: 2, // February (MWC)
+    month: 2,
     location: 'MWC, Barcelona',
     description: '5G/6G concept booth design including a flying taxi VR simulator system.',
     category: ProjectCategory.EXHIBITION,
@@ -66,14 +118,13 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     mainImageUrl: 'https://picsum.photos/1200/800?random=3',
     galleryImages: getGallery(3)
   },
-
   // 2022 Projects
   {
     id: 'p4',
     title: 'Kitchen & Bath Luxury',
     client: 'Kohler',
     year: 2022,
-    month: 2, // February (KBIS)
+    month: 2,
     location: 'KBIS, Orlando',
     description: 'Luxury showroom lighting and media server operation for the water pavilion.',
     category: ProjectCategory.EXHIBITION,
@@ -81,29 +132,27 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     mainImageUrl: 'https://picsum.photos/1200/800?random=4',
     galleryImages: getGallery(4)
   },
-
   // 2021 Projects
   {
     id: 'p5',
     title: 'Korea Electronics Show Highlight',
     client: 'Hyundai Mobis',
     year: 2021,
-    month: 10, // October (KES)
+    month: 10,
     location: 'KES, Seoul',
     description: 'Automotive display solutions and transparent OLED setup for concept car reveal.',
     category: ProjectCategory.EXHIBITION,
     tags: ['KES', 'Transparent OLED', 'Automotive'],
-    mainImageUrl: 'https://picsum.photos/1200/800?random=5',
+    mainImageUrl: '/projects/hyundai_mobis.png',
     galleryImages: getGallery(5)
   },
-
   // 2020 Projects
   {
     id: 'p6',
     title: 'Digital Signage Expo',
     client: 'Google Cloud',
     year: 2020,
-    month: 2, // February (ISE)
+    month: 2,
     location: 'ISE, Amsterdam',
     description: 'Cloud infrastructure visualization wall using 1.5mm pixel pitch LED.',
     category: ProjectCategory.EXHIBITION,
@@ -111,7 +160,6 @@ export const PORTFOLIO_DATA: PortfolioItem[] = [
     mainImageUrl: 'https://picsum.photos/1200/800?random=6',
     galleryImages: getGallery(6)
   },
-
   // Pre-2020 Projects (archive)
   {
     id: 'p7',
